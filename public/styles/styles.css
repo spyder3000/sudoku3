@@ -1,0 +1,87 @@
+html, body {
+    height88: 100%; 
+    width: 100%; 
+    font-family: 'Poppins', sans-serif;
+    color: #222; 
+  }
+  
+  body {
+      background-color: #ddd; 
+  }
+  
+  div.banner {
+      background-image: url("../backgrounds/grey081.gif");	
+      padding: 1.0em 0;   
+  }
+  div.banner h1 {
+      font-weight: bold; 
+      margin: 0.5rem 0 0; 
+      font-size: 150%; 
+      color: #191970;           /* purple text aligned in center */
+      text-align: center; 
+      padding-bottom: .2rem; 
+  }
+  div.banner h2 {
+      font-weight: bold; 
+      margin: 0.5em 0 0.5em 0; 
+      font-size: 130%; 
+      font-style: italic;       /* default color text (black) in italics aligned in center */
+      text-align: center;
+  }
+  
+  nav.navbar {
+      min-width: 100%; 
+      background-color: #444; 
+  } 
+  
+  nav.navbar-default .navbar-nav>li>a { 
+      color: white; 
+  }
+  
+  .navbar {
+    padding: .8rem;   /* 1rem = 16px; */
+  }
+  .navbar-nav li {
+    padding-right: 20px;
+  }
+  .nav-link {
+    font-size: 1.1em !important;
+  }
+  
+  #featured, #content2 { 
+      background-color: #eee; 
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+  } 
+  article.feature h1 {
+      background-color: rebeccapurple; 
+      color: white; text-align:center; width: 4rem; padding:0.3rem; margin-left: 1rem; display:none;
+  }
+  p.h_text { width: 80%; } 
+  
+  div.flist { 
+      margin-top: 2rem;
+      margin-bottom: 2rem; 
+  }
+  
+  div.footer {
+      background-color: seagreen;
+      border-top: 1px solid black; 
+  }
+  div.footrow p{
+      margin: 0 !important; 
+      padding: 0 !important; 
+  }
+  
+  a.custom-card,
+  a.custom-card:hover {
+    color: inherit;
+    text-decoration: none; 
+  }
+  
+  @media (min-width: 768px) 
+      { .navbar-nav>li>a {
+          padding-top: 5px;
+          padding-bottom: 5px;
+      }
+  }

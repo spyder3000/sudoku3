@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles/styles.css" rel="stylesheet">
+    <link href="/styles/sudokuMT16.css" rel="stylesheet">
+    <!---link href="/images/favicon.png" rel="icon"--->
+</head>
+<body class="body">
+	<div id="content_page" class="content container88">
+
+		<div class="sudoku container">
+			<div class="row">
+				<div class="puzzle_div col-xl-9 col-lg-12">
+					<select id="choose_puzzle" class="choose_puzzle">
+						<!--option value = "-1">Choose Puzzle</option-->
+						<option value = "99">Enter Puzzle</option> 
+						<option value = "0">Easy 1</option>
+						<option value = "1">Easy 2</option>
+						<option value = "2">Easy 3</option>
+						<option value = "3">Easy 4</option>
+						<!---option value = "4">Easy 5</option>
+						<option value = "5">Easy 6</option>
+						<option value = "6">Easy 7</option--->
+			
+						<option value = "20">Medium 1</option>	
+						<option value = "22">Medium 2</option>
+						<option value = "23">Medium 3</option>
+						<option value = "24">Medium 4</option>
+						
+						<option value = "40">Hard 1</option>
+						<option value = "41">Hard 2</option>
+						<option value = "54">Hard 3</option>
+						<option value = "21">Hard 4</option>
+						
+						<option value = "50">Difficult 1</option>
+						<option value = "51">Difficult 2</option>
+						<option value = "52">Difficult 3</option>
+						<option value = "53">Difficult 4</option>
+						<option value = "42">Difficult 5</option>
+						<!--option value = "59">Most Difficult</option-->
+						<!--option value = "60">Impossible</option-->	
+						<option value = "1000">16 x 16 puzzle 1</option>
+						<option value = "1001">16 x 16 puzzle 2</option>
+					</select>	
+					
+					<span id="clone_tbl">
+						<table class="possval possval1">
+							<tr><td class="p_1">1</td><td class="p_2">2</td><td class="p_3">3</td></tr>
+							<tr><td class="p_4">4</td><td class="p_5">5</td><td class="p_6">6</td></tr>
+							<tr><td class="p_7">7</td><td class="p_8">8</td><td class="p_9">9</td></tr>
+						</table>
+						<table class="possval possval2">
+							<tr><td class="p_1">1</td>	<td class="p_2">2</td>	<td class="p_3">3</td>	<td class="p_4">4</td></tr>
+							<tr><td class="p_5">5</td>	<td class="p_6">6</td>	<td class="p_7">7</td>	<td class="p_8">8</td></tr>
+							<tr><td class="p_9">9</td>	<td class="p_10">10</td><td class="p_11">11</td><td class="p_12">12</td></tr>
+							<tr><td class="p_13">13</td><td class="p_14">14</td><td class="p_15">15</td><td class="p_16">16</td></tr>
+						</table>			
+					</span>
+					<table id="sudokutbl" cellspacing="0" cellpadding="0" border="0">		
+					</table>
+				</div>
+				
+				<div class="options_div col-xl-3 col-lg-12 ">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12 col-lg-5 offset-lg-1 col-md-6">
+								<button id="btn_manual" class="btn btn_manual">Manual</button><button id="btn_next" class="btn btn_next">Next</button><button id="btn_go2" class="btn btn_go2">Next</button> 
+								<div id="manual_delay" style="display:none;">
+									<input type="radio" id="md1" name="mdelay" value="click1" > One-click
+									<input type="radio" id="md2" name="mdelay" value="click2"   checked="checked"> Two-click  
+								</div><br>		
+								<button id="btn_auto" class="btn btn_auto">Auto</button><button id="btn_pause" class="btn btn_pause">Pause</button><br>	
+								<div id="auto_delay"><b>Delay:  </b><br>
+									<input type="radio" id="ad1" name="adelay" value="delay0"> None
+									<input type="radio" id="ad2" name="adelay" value="delay1"> Short 
+									<input type="radio" id="ad3" name="adelay" value="delay2" checked="checked"> Long
+								</div>		
+								<div id="confirm_step"><b>Confirm Difficult Steps?  </b><br>
+									<input type="radio" id="ac1" name="aconfirm" value="confirm0" checked="checked"> No
+									<input type="radio" id="ac2" name="aconfirm" value="confirm1"> Yes
+								</div>	
+							</div>
+							<div class="col-xl-12 col-lg-5 col-md-6 ">
+								<div id="progress_msg"></div>
+								<div id="progress_msg2"></div>
+								<span id="proceed_section"><button id="btn_go" class="btn btn_go">Proceed</button><span class="cont_msg"> Press to Continue</span></span>		
+								<div id="mult_solutions_msg"></div>
+								<button id="btn_solve" class="btn btn_solve">Solve</button><button id="btn_refresh" class="btn btn_refresh">Refresh</button><button id="btn_clear" class="btn btn_clear hideme">Clear</button><br>
+							</div>							
+						</div>
+					</div>
+					<!---div class="row">
+						<div class="col-xl-12 col-lg-6">
+							<div id="mult_solutions_msg"></div>
+							<button id="btn_solve" class="btn btn_solve">Solve</button><button id="btn_refresh" class="btn btn_refresh">Refresh</button><button id="btn_clear" class="btn btn_clear hideme">Clear</button><br>
+						</div>
+					</div--->
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="/scripts/bundle.js"></script>
+</body>
+</html>

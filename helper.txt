@@ -1,0 +1,65 @@
+Utils.unfreezePage(self.params);
+
+        this.params = {
+            twoClick_active:  0, 
+            autoMode: 0, 
+            confirm_needed:  0, 
+            showFails: false, 
+            delay:  Delay.init()
+        }; 
+
+
+old -- document.id('sudokutbl').getElements("tbody").dispose(); 
+new -- var tjv01  = document.querySelectorAll("#sudokutbl tbody");  
+        for (let tt = 0; tt < tjv01.length; tt++) tjv01[tt].remove(); 
+
+old -- document.id("btn_solve").addEvents({click: this.solveButton}); 
+new -- document.getElementById("btn_solve").addEventListener('click', this.solveButton); 
+
+// document.id('sudokutbl').getElements("table.possval1").dispose();  
+var pjv01  = document.getElementById("sudokutbl").querySelector("table.possval1")
+
+document.getElementById('choose_puzzle').set('value', puzz); 
+document.getElementById('choose_puzzle').value = puzz; 
+
+document.id('btn_solve').disabled = false; 
+document.getElementById('btn_solve').disabled = false; 
+
+var puzznum = parseInt(document.id('choose_puzzle').get('value'));
+var puzznum = parseInt(document.getElementById('choose_puzzle').get('value'));
+
+XX document.id("t" + Misc.twoDigit(i) + Misc.twoDigit(j)).getElement("span.sqnum").set('text', '');
+XX document.querySelector("#t" + Utils.twoDigit(i) + Utils.twoDigit(j) + "span.sqnum").innerHTML = ''; 
+   document.getElementById("t" + Utils.twoDigit(i) + Utils.twoDigit(j)).querySelector("span.sqnum").innerHTML = '';     
+
+if (this.SIZE == 9) document.getElementById('sudokutbl').addClass('size9');	
+if (this.SIZE == 9) document.getElementById('sudokutbl').classList.add('size9');	
+
+document.id("t" + Utils.twoDigit(i) + Utils.twoDigit(j)).removeClass("seed");
+document.querySelector("#t" + Utils.twoDigit(i) + Utils.twoDigit(j)).classList.remove('seed');	
+
+// self.ui.poss.clone().inject(document.id("t" + Misc.twoDigit(i) + Misc.twoDigit(j)).getElement("span.sqnum"), 'after');  
+let tmp = self.ui.poss.cloneNode(true); 
+document.querySelector("#t" + Misc.twoDigit(i) + Misc.twoDigit(j) + " span.sqnum").appendChild(tmp);  
+
+document.getElementById('btn_clear').setStyle('visibility', 'visible');
+document.getElementById('btn_clear').style.visibility = 'visible';
+
+var puzznum = parseInt(document.getElementById('choose_puzzle').get('value'));
+var puzznum = parseInt(document.getElementById('choose_puzzle').value);
+var e = document.getElementById('choose_puzzle'); 
+var puzzName = e.options[e.selectedIndex].text;
+
+// document.getElementById('sudokutbl').querySelectorAll("input.insq").show(); 
+Utils.showIdClass('sudokutbl', 'input.insq'); 
+            
+convert all of these to this. vars:  
+        var ui = {};
+        var grid = null; var grid0 = null; var grid20 = null; var grid40 = null; var grid60 = null; 
+        var tmpgrid = []; 
+        //    var unsolved = 81; 
+        var puzzleSolved = 0; 
+        var puzzleFail = 0; 
+        var puzzleEntry = 0;    // indicates this is a user-entered puzzle 
+        var puzzleValid = 1;    // puzzle setup is valid indicator
+        var deadend = 0;        // value of 1 indicates that the incremental solve cannot be continued
